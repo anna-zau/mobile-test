@@ -18,7 +18,7 @@ const image = {uri: 'https://i.ibb.co/Ptk9bqr/Photo-BG.jpg'};
 
 
 
-export default function RegistrationScreen ()  {
+export default function RegistrationScreen ({ navigation })  {
   const [login, setLogin] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -37,8 +37,8 @@ export default function RegistrationScreen ()  {
     Keyboard.dismiss();
     setIsShowKeyboard(false);
     resetForm();
-
-    console.log("Login:", login, "Email:", email, "Password:",  password)
+    navigation.navigate("Home");
+    console.log("Login:", login, "Email:", email, "Password:",  password);
   };
 
   const  resetForm= () => {
@@ -130,7 +130,7 @@ export default function RegistrationScreen ()  {
                 <Text style={styles.btnText}>Sign Up</Text>
               </TouchableOpacity>
 
-              <TouchableOpacity activeOpacity={0.8}>
+              <TouchableOpacity activeOpacity={0.8} onPress={() => navigation.navigate("Login")}>
                 <Text style={styles.textLink} >Already have an account? Log in here</Text>
                 </TouchableOpacity>
                             

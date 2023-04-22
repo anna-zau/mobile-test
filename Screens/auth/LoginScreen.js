@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
 
 
 
-export default function RegistrationScreen ()  {
+export default function Login ({ navigation })  {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -106,7 +106,7 @@ export default function RegistrationScreen ()  {
     Keyboard.dismiss();
     setIsShowKeyboard(false);
     resetForm();
-
+    navigation.navigate("Home");
     console.log( "Email:", email, "Password:",  password);
   };
 
@@ -189,7 +189,8 @@ export default function RegistrationScreen ()  {
                 <Text style={styles.btnText}>Sign Up</Text>
               </TouchableOpacity>
 
-              <TouchableOpacity activeOpacity={0.8}>
+              <TouchableOpacity activeOpacity={0.8}  onPress={() => navigation.navigate("Registration")}
+>
                 <Text style={styles.textLink} >Don't have an account? Register here</Text>
                 </TouchableOpacity>
                             
