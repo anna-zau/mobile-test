@@ -15,10 +15,9 @@ import HeaderBackButton from '../../components/BackBtn'
 const MainTab = createBottomTabNavigator();
 
 
-const Home = () => {
+const Home = ({navigation}) => {
     return (
       <MainTab.Navigator  initialRouteName="Posts" screenOptions={{ tabBarShowLabel: false , 
-        // tabBarStyle: { paddingTop: 60 }, 
         tabBarStyle: {
   justifyContent: 'space-between',
   
@@ -29,10 +28,8 @@ const Home = () => {
       >
         <MainTab.Screen
           options={{
-            title: 'Publications',
-            headerTitleAlign: 'center',
-            // headerLeft: () => <HeaderBackButton />,
-            headerRight: () => (<HeaderLogoutButton  />),
+            headerShown: false,
+            
             tabBarIcon: ({ focused, size, color }) => {
               return (<View style={{
                 width: 70,
@@ -51,7 +48,7 @@ const Home = () => {
           options={{
             title: 'Create a post',
             headerTitleAlign: 'center',
-                        headerLeft: () => <HeaderBackButton />,
+                        headerLeft: () => <HeaderBackButton onPress={() => navigation.goBack()}/>,
 
             tabBarIcon: ({ focused, size, color }) => {
               return <View style={{
