@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet , TouchableOpacity} from "react-native";
+import { View} from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import { Feather, AntDesign  } from '@expo/vector-icons'; 
@@ -7,7 +7,6 @@ import { Feather, AntDesign  } from '@expo/vector-icons';
 import PostsScreen from './PostsScreen';
 import CreatePostScreen from './CreatePostsScreen';
 import ProfileScreen from './ProfileScreen';
-import HeaderLogoutButton from '../../components/LogoutBtn'
 import HeaderBackButton from '../../components/BackBtn'
 
 

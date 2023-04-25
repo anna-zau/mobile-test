@@ -14,7 +14,6 @@ const PostsScreen = () => {
     <NestedScreen.Navigator>
       <NestedScreen.Screen
        options={{
-        // headerShown: false,
         headerTitleAlign: 'center',
         headerRight: () => (<HeaderLogoutButton  />),
         tabBarIcon: ({ focused, size, color }) => {

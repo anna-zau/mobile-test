@@ -154,7 +154,7 @@ export default function Login ({ navigation })  {
                   placeholder="Email"
                   style={styles.input}
 
-                  // secureTextEntry={true}
+                
                   onBlur={onBlur}
                   onFocus={onFocus}
                 

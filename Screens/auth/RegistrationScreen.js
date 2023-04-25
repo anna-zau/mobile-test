@@ -95,7 +95,6 @@ export default function RegistrationScreen ({ navigation })  {
                   placeholder="Email"
                   style={styles.input}
 
-                  // secureTextEntry={true}
                   onBlur={onBlur}
                   onFocus={onFocus}
                 
